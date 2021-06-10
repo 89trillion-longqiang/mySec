@@ -6,7 +6,7 @@ import (
 
 func main(){
 
-	r := route.SetUpRount()
+	r := route.SetUpRoute()
 	r.Run(":9000")
 }
 

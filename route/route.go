@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func SetUpRount() *gin.Engine  {
+func SetUpRoute() *gin.Engine  {
 	r := gin.Default()
 	c1 := r.Group("/C1")
 

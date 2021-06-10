@@ -2,10 +2,24 @@ package calcula
 
 import "fmt"
 
-func Calculate(s string) (ret int ,err error){
-	if a := s[len(s)-1] ; a >= '0' && a <= '9' {
-		//fmt.Println(a)
+func StringVerification(s string)bool{
+	a := s[len(s)-1]
+	if a >= '0' && a <= '9' {
+		return true
 	}else {
+		return false
+	}
+}
+
+func getSum(nums []int) (sum int){
+
+	for _, v := range nums { // 将nums栈中的数字逐个累加
+		sum += v
+	}
+	return sum
+}
+func Calculate(s string) (ret int ,err error){
+	if !StringVerification(s){
 		err = fmt.Errorf("%s","exp error")
 		return 0 ,err
 	}
@@ -42,10 +56,6 @@ func Calculate(s string) (ret int ,err error){
 		}
 	}
 
-	sum := 0
-	for _, v := range nums { // 将nums栈中的数字逐个累加
-		sum += v
-	}
-	return sum ,err
-
+	return getSum(nums),err
 }
+
