@@ -1,7 +1,7 @@
 package main
 
 import (
-	"route"
+	"calculator/route"
 )
 
 func main(){

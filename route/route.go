@@ -3,7 +3,7 @@ package route
 import (
 	"strings"
 
-	"calcula"
+	"calculator/calcula"
 	"github.com/gin-gonic/gin"
 )
 
